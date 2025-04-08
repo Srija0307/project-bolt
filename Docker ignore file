@@ -1,0 +1,8 @@
+node_modules
+dist
+.git
+docker build -t station-navigator .
+docker run -p 3000:80 station-navigatornpm install
+npm run build
+docker build -t app .
+docker run -p 3000:80 app
